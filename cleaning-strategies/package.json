@@ -1,0 +1,23 @@
+{
+  "name": "cleaning-strategies",
+  "version": "1.0.0",
+  "description": "A set of commands to clean a cvs file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "clean-csv": "index.js"
+  },
+  "keywords": [
+    "CLI",
+    "data-mining",
+    "preprocess"
+  ],
+  "author": "Jonathan Islas",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.9.0",
+    "fast-csv": "^2.1.0"
+  }
+}
