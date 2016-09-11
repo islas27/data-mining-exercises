@@ -64,3 +64,4 @@ jspm_packages
 #ignore processed files
 out-*.csv
 out*.csv
+test.js
