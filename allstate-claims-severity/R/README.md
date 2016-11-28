@@ -1,6 +1,6 @@
 # Using R in a server
 
-Included in this folder you will find a script to automate the installation of RStudio Server on a DO droplet in `install-rserver.sh`
+Included in this folder you will find a script to automate the installation of R and alternatively an RStudio Server on a DO droplet in `install-rserver.sh`
 
 ## How to use it
 
@@ -9,7 +9,7 @@ Included in this folder you will find a script to automate the installation of R
 - Login using SSH
 - Copy-paste the code into a file and execute it
 - Upload to the server your datasets
-- Access the RS Server using the IP assigned by DO and the port 8787: http//<droplet-ip>:8787/
+- (If Installed)Access the RS Server using the IP assigned by DO and the port 8787: http//<droplet-ip>:8787/
 - Start using the power of the droplet!
 
 ## How to control the RS Server?
@@ -28,5 +28,5 @@ If you have the problem of some locale issue or something, probably you haven't 
 ```sh
 rsync -rave "ssh -i ~/.ssh/id_rsa" <source-data> <your-user>@<droplet-ip>:<folder-destination>
 # Example. If you followed the previous steps, it will ask for the password you inputed in the installation script
-rsync -rave "ssh" /Users/myuser/Downloads/datasets/* rUser@100.128.170.2:/home/r_user/datasets
+rsync -rave "ssh -i ~/.ssh/id_rsa" /Users/islas/datasets/* rUser@10.10.10.3:/home/r_user/datasets
 ```

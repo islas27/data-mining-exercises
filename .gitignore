@@ -64,3 +64,4 @@ jspm_packages
 #ignore processed files
 *.csv
 test.js
+*.txt

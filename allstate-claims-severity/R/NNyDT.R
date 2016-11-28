@@ -21,11 +21,11 @@ inflate <- function(min, max, x){
 # Convert an array of data into normalized data (min 0 max 1) taking into account the
 # Factor levels
 convertFactorToNormalized <- function(f){
-  return(normalize(as.numeric(factor(f))))  
+  return(normalize(as.numeric(factor(f))))
 }
 
 MAE <- function(actual, predicted) {
-  mean(abs(actual - predicted))  
+  mean(abs(actual - predicted))
 }
 
 # Reorder, Split on train and test for later comparison
@@ -173,6 +173,7 @@ dt_pred <- predict(dt_model, dt_test)
 
 dt_results <- unfactor(dt_pred)
 MAE(dt_results, clean_test$loss)
+### Results: 1697~
 
 # Boosted DT
 dt_model_boost <- C5.0(dt_train[-131], dt_train$loss, trials = 10)
@@ -181,7 +182,7 @@ dt_pred_boosted <- predict(dt_model_boost, dt_test)
 
 dt_results_boosted <- unfactor(dt_pred_boosted)
 MAE(dt_results_boosted, clean_test$loss)
-
+### Results: 1756~
 
 ############# NN
 columns <- c("cat57","cat116","loss")
